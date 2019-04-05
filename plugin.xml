@@ -18,6 +18,7 @@
     <preference name="CUSTOM_TAB_COLOR_RGB" default="#ffffff" />
   
     <platform name="android">
+        <preference name="ANDROID_SUPPORT_VERSION" default="27.+"/>
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="BrowserTab">
                 <param name="android-package"
@@ -26,7 +27,7 @@
         </config-file>
         <source-file src="src/android/BrowserTab.java"
             target-dir="src/com/google/cordova/plugin" />
-        <framework src="com.android.support:customtabs:23.3.0"/>
+        <framework src="com.android.support:customtabs:$ANDROID_SUPPORT_VERSION"/>
         <framework src="src/android/BrowserTab.gradle" custom="true" type="gradleReference"/>
   
         <source-file src="src/android/res/browsertab.xml" target-dir="res/values" />
